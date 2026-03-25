@@ -3,9 +3,30 @@
 
 <head>
 
-<title>Hello I'm Fadil 🚀 | Web3 Builder</title>
+<title> Fadil | Web3 Builder</title>
 
 <style>
+
+#projects{
+margin-top:80px;
+text-align:center;
+}
+
+.project{
+background:#0f172a;
+padding:20px;
+margin:20px auto;
+border-radius:10px;
+max-width:400px;
+box-shadow:0 0 20px #00ffcc22;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px #00ffcc55;
+}
+
 
 body{
 margin:0;
@@ -130,7 +151,7 @@ color:#94a3b8;
 
 <h1>Hello I'm <span>Fadil</span></h1>
 
-<div class="typing" id="typing"></div>
+<h2 id="typing"></h2>
 
 <a class="btn" href="#">View Portfolio</a>
 
@@ -214,6 +235,36 @@ requestAnimationFrame(draw);
 
 draw();
 
+</script>
+
+<script>
+const text = "Front End Developer | Web3 Enthusiast";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 70);
+  }
+}
+
+typeEffect();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<div id="particles-js"></div>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 2 },
+    move: { speed: 1 },
+    color: { value: "#00ffcc" },
+    line_linked: { enable: false }
+  }
+});
 </script>
 
 </body>
