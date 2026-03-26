@@ -9,6 +9,38 @@
 
 <style>
 
+#skills{
+max-width:700px;
+margin:100px auto;
+text-align:center;
+}
+
+.skill{
+margin:20px 0;
+}
+
+.progress{
+background:#111;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:100%;
+background:#00ffcc;
+box-shadow:0 0 10px #00ffcc;
+animation:load 2s forwards;
+}
+
+.html{width:90%}
+.css{width:85%}
+.js{width:75%}
+
+@keyframes load{
+from{width:0}
+}
+
 #projects{
 margin-top:80px;
 text-align:center;
@@ -90,20 +122,19 @@ margin-top:20px;
 }
 
 .btn{
-display:inline-block;
-margin-top:40px;
-padding:15px 35px;
-background:#00ff88;
+background:#00ffcc;
 color:black;
-border-radius:8px;
+padding:12px 30px;
+border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 transition:0.3s;
+box-shadow:0 0 15px #00ffcc;
 }
 
 .btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 25px #00ff88;
+transform:scale(1.05);
+box-shadow:0 0 30px #00ffcc;
 }
 
 .cards{
@@ -190,6 +221,14 @@ max-width:900px;
 margin:auto;
 }
 
+#about{
+max-width:700px;
+margin:120px auto;
+text-align:center;
+line-height:1.6;
+color:#94a3b8;
+}
+
 </style>
 
 </head>
@@ -261,6 +300,44 @@ margin:auto;
 <h3>JavaScript</h3>
 <p>Interactive website</p>
 </div>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="progress">
+<div class="progress-bar html"></div>
+</div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="progress">
+<div class="progress-bar css"></div>
+</div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="progress">
+<div class="progress-bar js"></div>
+</div>
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I'm Fadil, a Front End Developer focused on building modern
+web interfaces and exploring Web3 technologies.
+</p>
 
 </section>
 
