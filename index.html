@@ -894,17 +894,19 @@ particle.remove();
 
 <script>
 
+window.onload = function(){
+
 const bars=document.querySelectorAll(".progress-bar");
 
 window.addEventListener("scroll",()=>{
 
 bars.forEach(bar=>{
-
-bar.style.width=bar.dataset.width;
-
+bar.style.width = bar.dataset.width;
 });
 
 });
+
+};
 
 </script>
 
