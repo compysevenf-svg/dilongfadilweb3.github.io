@@ -9,6 +9,40 @@
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
+.project-links{
+  margin-top:10px;
+}
+
+.project-links a{
+  margin-right:10px;
+  color:#00ffcc;
+  text-decoration:none;
+}
+
+.hero-actions{
+  margin-top:20px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+
+.btn-outline{
+  padding:10px 20px;
+  border:1px solid #00ffcc;
+  color:#00ffcc;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+.btn-outline:hover{
+  background:#00ffcc;
+  color:black;
+}
+
 .hero h1 span{
 
 color:#00ffcc;
@@ -216,13 +250,13 @@ color:#888;
 </nav>
 
 <section class="hero">
+  <h1>Hello, I'm <span>Fadil</span> 🚀</h1>
+  <p id="typing"></p>
 
-<h1>Hello I'm <span>Fadil</span> 🚀</h1>
-
-<p id="typing"></p>
-
-<a class="btn" href="#projects">View Portfolio</a>
-
+  <div class="hero-actions">
+    <a class="btn" href="#projects">View Projects</a>
+    <a class="btn-outline" href="https://github.com/USERNAME_GITHUB" target="_blank">GitHub</a>
+  </div>
 </section>
 
 <section class="projects" id="projects">
@@ -244,10 +278,13 @@ color:#888;
 </div>
 
 <div class="project">
-<h3>Portfolio Website</h3>
-<p>Developer portfolio with animations</p>
-</div>
+  <h3>Crypto Dashboard</h3>
+  <p>Modern Web3 dashboard UI built with HTML, CSS, and JavaScript.</p>
 
+  <div class="project-links">
+    <a href="#">Live Demo</a>
+    <a href="https://github.com/Fadil_GITHUB/project">Code</a>
+  </div>
 </div>
 
 </section>
@@ -293,9 +330,19 @@ I'm Fadil, a Front End Developer focused on building modern web interfaces and e
 
 <h2>Contact</h2>
 
-<p>Email: dilongkoko@email.com</p>
-<p>GitHub: github.com/Fadil</p>
-<p>Twitter: @DeFistrategist</p>
+<p>Email: dilongkoko@gmail.com</p>
+
+<p>
+<a href="https://github.com/Fadil_GITHUB">GitHub</a> |
+<a href="https://twitter.com/DeFistrategist">Twitter</a>
+</p>
+
+</section>
+
+<section class="github">
+<h2>GitHub Stats</h2>
+
+<img src="https://github-readme-stats.vercel.app/api?username=Fadil_GITHUB&show_icons=true&theme=tokyonight">
 
 </section>
 
@@ -420,6 +467,20 @@ bar.style.width = bar.dataset.width;
 
 });
 
+</script>
+
+<script>
+const text = "Front-End Developer • Web3 Explorer • Building modern web interfaces";
+let i=0;
+
+function type(){
+  if(i < text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type,40);
+  }
+}
+type();
 </script>
 
 </body>
