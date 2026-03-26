@@ -1,249 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
-<title> Fadil | Web3 Builder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+<title>Fadil | Web3 Developer</title>
 
 <style>
-
-.progress-bar{
-
-width:0;
-height:6px;
-background:#00ffcc;
-transition:2s;
-
-}
-
-#hacking{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:black;
-color:#00ffcc;
-font-family:monospace;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999;
-flex-direction:column;
-}
-
-.hero h1 span{
-
-animation:glow 2s infinite alternate;
-
-}
-
-@keyframes glow{
-
-from{
-text-shadow:0 0 10px #00ffcc;
-}
-
-to{
-text-shadow:0 0 30px #00ffcc,0 0 60px #00ffcc;
-}
-
-}
-
-.trail{
-position:fixed;
-width:6px;
-height:6px;
-background:#00ffcc;
-border-radius:50%;
-pointer-events:none;
-box-shadow:0 0 10px #00ffcc;
-}
-
-.terminal-box{
-background:#020617;
-border:1px solid #00ffcc;
-padding:20px;
-margin:60px auto;
-max-width:600px;
-font-family:monospace;
-box-shadow:0 0 20px #00ffcc44;
-}
-
-.terminal-output{
-min-height:120px;
-margin-bottom:10px;
-}
-
-#terminal-input{
-width:100%;
-background:black;
-border:none;
-color:#00ffcc;
-font-family:monospace;
-font-size:16px;
-outline:none;
-}
-
-.card,.project{
-
-transition:0.4s;
-cursor:pointer;
-
-}
-
-.card:hover,.project:hover{
-
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 0 40px #00ffcc88;
-
-}
-
-#matrix{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-2;
-background:black;
-}
-
-#terminal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:black;
-color:#00ffcc;
-font-family:monospace;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:9999;
-animation:fadeOut 3s forwards;
-animation-delay:3s;
-}
-
-@keyframes fadeOut{
-to{
-opacity:0;
-visibility:hidden;
-}
-}
-
-body{
-cursor:crosshair;
-}
-
-.glow{
-position:fixed;
-width:20px;
-height:20px;
-background:#00ffcc;
-border-radius:50%;
-pointer-events:none;
-box-shadow:0 0 20px #00ffcc,0 0 40px #00ffcc;
-transform:translate(-50%,-50%);
-}
-
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:40px;
-}
-
-.project{
-transition:all 0.4s ease;
-}
-
-.project:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 0 40px #00ffcc88;
-}
-
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:40px;
-}
-
-.project{
-transition:all 0.4s ease;
-}
-
-.project:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 0 40px #00ffcc88;
-}
-
-#skills{
-max-width:700px;
-margin:100px auto;
-text-align:center;
-}
-
-.skill{
-margin:20px 0;
-}
-
-.progress{
-background:#111;
-height:10px;
-border-radius:10px;
-overflow:hidden;
-}
-
-.progress-bar{
-height:100%;
-background:#00ffcc;
-box-shadow:0 0 10px #00ffcc;
-animation:load 2s forwards;
-}
-
-.html{width:90%}
-.css{width:85%}
-.js{width:75%}
-
-@keyframes load{
-from{width:0}
-}
-
-#projects{
-margin-top:80px;
-text-align:center;
-}
-
-.project{
-background:#0f172a;
-padding:20px;
-margin:20px auto;
-border-radius:10px;
-max-width:400px;
-box-shadow:0 0 20px #00ffcc22;
-transition:0.3s;
-}
-
-.project:hover{
-transform:translateY(-5px);
-box-shadow:0 0 30px #00ffcc55;
-}
-
-.project:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 0 40px #00ffcc66;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 
 body{
 margin:0;
@@ -259,7 +23,6 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:black;
 z-index:-1;
 }
 
@@ -269,159 +32,94 @@ justify-content:space-between;
 padding:20px 40px;
 }
 
-nav{
-position:sticky;
-top:0;
-background:black;
-z-index:1000;
-}
-
 nav h2{
-color:#00ff88;
-text-shadow:0 0 10px #00ff88;
+color:#00ffcc;
+text-shadow:0 0 10px #00ffcc;
 }
 
 nav a{
 color:white;
-text-decoration:none;
 margin-left:20px;
+text-decoration:none;
 }
 
 .hero{
 text-align:center;
-margin-top:150px;
+margin-top:120px;
 }
 
-.hero h1{
-font-size:60px;
-}
-
-.hero span{
-color:#00ff88;
-text-shadow:0 0 20px #00ff88;
-}
-
-.hero{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.typing{
-color:#00ff88;
-font-size:22px;
-margin-top:20px;
+.hero h1 span{
+color:#00ffcc;
+text-shadow:0 0 20px #00ffcc;
 }
 
 .btn{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
 background:#00ffcc;
 color:black;
-padding:12px 30px;
-border-radius:30px;
+border-radius:8px;
 text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-box-shadow:0 0 15px #00ffcc;
 }
 
-.btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 30px #00ffcc;
-}
-
-.cards{
-display:flex;
-justify-content:center;
-gap:25px;
-margin-top:120px;
-}
-
-.card{
-background:#020617;
-padding:35px;
-border-radius:12px;
-width:220px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-12px);
-box-shadow:0 0 25px #00ff88;
-}
-
-footer{
+.projects{
 text-align:center;
-margin-top:120px;
-padding:20px;
-color:#94a3b8;
-}
-
-.projects-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-max-width:900px;
-margin:40px auto;
-}
-
-.project{
-background:#0f172a;
-padding:25px;
-border-radius:12px;
-transition:0.3s;
-box-shadow:0 0 20px #00ffcc22;
-}
-
-.cards{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:60px;
-}
-
-.card{
-background:#0f172a;
-padding:25px;
-border-radius:12px;
-width:220px;
-text-align:center;
-transition:0.3s;
-box-shadow:0 0 20px #00ffcc22;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 40px #00ffcc66;
-}
-
-#projects{
 margin-top:100px;
-text-align:center;
 }
 
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-max-width:900px;
-margin:auto;
+padding:40px;
+}
+
+.project{
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 20px #00ffcc22;
+transition:0.3s;
 }
 
 .project:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 0 40px #00ffcc66;
+transform:translateY(-8px);
+box-shadow:0 0 30px #00ffcc55;
 }
 
-#about{
-max-width:700px;
-margin:120px auto;
+.skills{
 text-align:center;
-line-height:1.6;
-color:#94a3b8;
+margin-top:80px;
+}
+
+.skill{
+width:70%;
+margin:20px auto;
+}
+
+.progress{
+background:#111;
+height:6px;
+border-radius:10px;
+}
+
+.progress-bar{
+height:6px;
+background:#00ffcc;
+border-radius:10px;
+}
+
+.about{
+text-align:center;
+margin:100px 20px;
+color:#bbb;
+}
+
+footer{
+text-align:center;
+margin:80px;
+color:#888;
 }
 
 </style>
@@ -429,15 +127,6 @@ color:#94a3b8;
 </head>
 
 <body>
-
-
-<canvas id="matrix"></canvas>
-
-<div id="terminal">
-
-<p id="terminal-text"></p>
-
-</div>
 
 <canvas id="particles"></canvas>
 
@@ -447,25 +136,23 @@ color:#94a3b8;
 
 <div>
 <a href="#">Home</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 
 </nav>
 
 <section class="hero">
 
-<h1>Hello I'm <span>Fadil 🚀</span></h1>
+<h1>Hello I'm <span>Fadil</span> 🚀</h1>
 
-<h2 id="typing"></h2>
+<p>Front End Developer | Web3 Enthusiast</p>
 
-<a class="btn" href="#">View Portfolio</a>
+<a class="btn" href="#projects">View Portfolio</a>
 
 </section>
 
-<section class="cards" data-aos="fade-up">
-
-<section id="projects" data-aos="fade-up">
+<section class="projects" id="projects">
 
 <h2>Projects</h2>
 
@@ -490,92 +177,50 @@ color:#94a3b8;
 
 </section>
 
-<div class="card">
-<h3>HTML</h3>
-<p>Building web structure</p>
-</div>
-
-<div class="card">
-<h3>CSS</h3>
-<p>Design & animation</p>
-</div>
-
-<div class="card">
-<h3>JavaScript</h3>
-<p>Interactive website</p>
-</div>
-
-</section>
-
-<section id="skills">
+<section class="skills">
 
 <h2>Skills</h2>
 
 <div class="skill">
 <p>HTML</p>
 <div class="progress">
-<div class="progress-bar html"></div>
+<div class="progress-bar" style="width:90%"></div>
 </div>
 </div>
 
 <div class="skill">
 <p>CSS</p>
 <div class="progress">
-<div class="progress-bar css"></div>
+<div class="progress-bar" style="width:80%"></div>
 </div>
 </div>
 
 <div class="skill">
 <p>JavaScript</p>
 <div class="progress">
-<div class="progress-bar js"></div>
+<div class="progress-bar" style="width:70%"></div>
 </div>
 </div>
 
 </section>
 
-<section id="about">
+<section class="about">
 
 <h2>About Me</h2>
 
 <p>
-<p id="typing-text"></p>
+I'm Fadil, a Front End Developer focused on building modern web interfaces and exploring Web3 technologies.
 </p>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: fadil@email.com</p>
-
-<p>Twitter: @fadildev</p>
-
-<p>GitHub: github.com/username</p>
 
 </section>
 
 <footer>
 
-<p>© 2026 Fadil Irfandi</p>
+© 2026 Fadil Irfandi
 
 </footer>
 
 <script>
-
-const text = "Front End Developer | Web3 Enthusiast";
-let i = 0;
-
-function typing(){
-if(i < text.length){
-document.getElementById("typing").innerHTML += text.charAt(i);
-i++;
-setTimeout(typing,50);
-}
-}
-
-typing();
 
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
@@ -583,22 +228,26 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let particles = [];
+const particles = [];
 
 for(let i=0;i<120;i++){
+
 particles.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
 size:Math.random()*2
 });
+
 }
 
-function draw(){
+function animate(){
+
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
-ctx.fillStyle="#00ff88";
+ctx.fillStyle="#00ffcc";
 
 particles.forEach(p=>{
+
 ctx.beginPath();
 ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
 ctx.fill();
@@ -608,306 +257,16 @@ p.y += 0.3;
 if(p.y > canvas.height){
 p.y = 0;
 }
-});
-
-requestAnimationFrame(draw);
-}
-
-draw();
-
-</script>
-
-<script>
-const text = "Front End Developer | Web3 Enthusiast";
-let i = 0;
-
-function typeEffect() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 70);
-  }
-}
-
-typeEffect();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
-<div id="particles-js"></div>
-
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    size: { value: 2 },
-    move: { speed: 1 },
-    color: { value: "#00ffcc" },
-    line_linked: { enable: false }
-  }
-});
-</script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-AOS.init({
-duration:1000,
-once:true
-});
-</script>
-<script>
-const text = "Front End Developer | Web3 Builder | Open Source Enthusiast";
-let i = 0;
-
-function typing() {
-if (i < text.length) {
-document.getElementById("typing-text").innerHTML += text.charAt(i);
-i++;
-setTimeout(typing, 50);
-}
-}
-
-typing();
-</script>
-
-<script>
-const glow = document.querySelector(".glow");
-
-document.addEventListener("mousemove", e=>{
-glow.style.left = e.clientX + "px";
-glow.style.top = e.clientY + "px";
-});
-</script>
-
-<div class="glow"></div>
-
-<script>
-
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-
-const drops = [];
-
-for(let x = 0; x < columns; x++){
-drops[x] = 1;
-}
-
-function draw(){
-
-ctx.fillStyle = "rgba(0,0,0,0.05)";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle = "#00ffcc";
-ctx.font = fontSize + "px monospace";
-
-for(let i = 0; i < drops.length; i++){
-
-const text = letters.charAt(Math.floor(Math.random()*letters.length));
-
-ctx.fillText(text,i*fontSize,drops[i]*fontSize);
-
-if(drops[i]*fontSize > canvas.height && Math.random() > 0.975){
-drops[i] = 0;
-}
-
-drops[i]++;
-}
-
-}
-
-setInterval(draw,33);
-
-</script>
-
-<script>
-
-const terminalLines = [
-"> loading fadil.dev...",
-"> initializing portfolio...",
-"> connecting to web3...",
-"> welcome developer"
-];
-
-let line = 0;
-let char = 0;
-
-function typeTerminal(){
-
-if(line < terminalLines.length){
-
-const element = document.getElementById("terminal-text");
-
-if(char < terminalLines[line].length){
-
-element.innerHTML += terminalLines[line].charAt(char);
-char++;
-
-setTimeout(typeTerminal,40);
-
-}else{
-
-element.innerHTML += "<br>";
-line++;
-char = 0;
-
-setTimeout(typeTerminal,300);
-
-}
-
-}
-
-}
-
-typeTerminal();
-
-</script>
-
-<div id="hacking">
-<div id="hack-text"></div>
-</div>
-
-<div class="progress-bar html" data-width="90%"></div>
-<div class="progress-bar css" data-width="80%"></div>
-<div class="progress-bar js" data-width="70%"></div>
-
-<div class="terminal-box">
-
-<div class="terminal-output" id="output">
-Welcome to Fadil Terminal
-Type: help
-</div>
-
-<input type="text" id="terminal-input" placeholder="type command...">
-
-</div>
-
-<script>
-
-const input = document.getElementById("terminal-input");
-const output = document.getElementById("output");
-
-input.addEventListener("keydown",function(e){
-
-if(e.key === "Enter"){
-
-let cmd = input.value;
-
-output.innerHTML += "<br>> " + cmd;
-
-if(cmd === "help"){
-output.innerHTML += "<br>commands: about, skills, github";
-}
-
-else if(cmd === "about"){
-output.innerHTML += "<br>Front End Developer | Web3 Builder";
-}
-
-else if(cmd === "skills"){
-output.innerHTML += "<br>HTML CSS JavaScript";
-}
-
-else if(cmd === "github"){
-output.innerHTML += "<br>github.com/username";
-}
-
-else{
-output.innerHTML += "<br>command not found";
-}
-
-input.value="";
-
-}
 
 });
 
-</script>
-
-<script>
-
-document.addEventListener("mousemove",e=>{
-
-let trail = document.createElement("div");
-
-trail.className="trail";
-
-trail.style.left=e.pageX+"px";
-trail.style.top=e.pageY+"px";
-
-document.body.appendChild(trail);
-
-setTimeout(()=>{
-
-trail.remove();
-
-},200);
-
-});
-
-</script>
-
-<script>
-
-document.addEventListener("click",function(e){
-
-for(let i=0;i<15;i++){
-
-let particle=document.createElement("div");
-
-particle.style.position="fixed";
-particle.style.width="6px";
-particle.style.height="6px";
-particle.style.background="#00ffcc";
-particle.style.borderRadius="50%";
-particle.style.left=e.clientX+"px";
-particle.style.top=e.clientY+"px";
-
-document.body.appendChild(particle);
-
-let x=(Math.random()-0.5)*200;
-let y=(Math.random()-0.5)*200;
-
-particle.animate([
-{transform:"translate(0,0)",opacity:1},
-{transform:`translate(${x}px,${y}px)`,opacity:0}
-],{
-duration:800
-});
-
-setTimeout(()=>{
-particle.remove();
-},800);
+requestAnimationFrame(animate);
 
 }
 
-});
-
-</script>
-
-<script>
-
-window.onload = function(){
-
-const bars=document.querySelectorAll(".progress-bar");
-
-window.addEventListener("scroll",()=>{
-
-bars.forEach(bar=>{
-bar.style.width = bar.dataset.width;
-});
-
-});
-
-};
+animate();
 
 </script>
 
 </body>
-
 </html>
