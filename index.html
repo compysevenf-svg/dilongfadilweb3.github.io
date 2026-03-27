@@ -240,7 +240,7 @@ footer{
 
 <section>
 <h2>GitHub Stats</h2>
-<img src="https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=tokyonight">
+<img src="https://github-readme-stats.vercel.app/api?username=compysevenf-svg&show_icons=true&theme=tokyonight">
 </section>
 
 <footer>
@@ -305,6 +305,7 @@ faders.forEach(el=>observer.observe(el));
 
 </script>
 
+<script>
 fetch("https://api.github.com/users/USERNAME/repos")
 .then(res => res.json())
 .then(data => {
@@ -340,7 +341,8 @@ function typing(){
 }
 
 typing();
-
+</script>
+<script>
 document.addEventListener("mousemove",e=>{
   let dot = document.createElement("div");
   dot.style.position="fixed";
@@ -355,7 +357,7 @@ document.addEventListener("mousemove",e=>{
 
   setTimeout(()=>dot.remove(),300);
 });
-
+</script>
 </body>
 </html>
 
