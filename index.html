@@ -9,6 +9,51 @@
 
 <style>
 
+html {
+  scroll-behavior:smooth;
+}
+
+.projects-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.project {
+  background:#0f172a;
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.project:hover {
+  transform:translateY(-5px);
+}
+
+.btn {
+  padding:12px 25px;
+  border-radius:30px;
+  background:#00ffcc;
+  color:black;
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px #00ffcc;
+}
+
+h1 span {
+  color:#00ffcc;
+  text-shadow:0 0 10px #00ffcc;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow:0 0 5px #00ffcc; }
+  to { text-shadow:0 0 20px #00ffcc; }
+}
+
 html{
 scroll-behavior:smooth;
 }
@@ -236,6 +281,42 @@ color:#888;
 <body>
 
 <canvas id="particles"></canvas>
+
+<script>
+const c = document.getElementById("particles");
+const ctx = c.getContext("2d");
+
+c.width = window.innerWidth;
+c.height = window.innerHeight;
+
+let dots = [];
+
+for(let i=0;i<30;i++){
+  dots.push({
+    x:Math.random()*c.width,
+    y:Math.random()*c.height,
+    r:Math.random()*2
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,c.width,c.height);
+
+  dots.forEach(d=>{
+    ctx.beginPath();
+    ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+    ctx.fillStyle="#00ffcc";
+    ctx.fill();
+
+    d.y+=0.3;
+    if(d.y>c.height) d.y=0;
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
 
 <nav>
 
