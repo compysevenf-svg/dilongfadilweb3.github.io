@@ -6,10 +6,39 @@
 <title>Fadil | Web3 Developer</title>
 
 <style>
+
+.primary{
+  background:#00ffcc;
+  color:black;
+  transition:0.3s;
+}
+
+.primary:hover{
+  box-shadow:0 0 25px #00ffcc;
+  transform:scale(1.05);
+}
+
+.outline{
+  border:1px solid #00ffcc;
+  color:#00ffcc;
+}
+
+.outline:hover{
+  background:#00ffcc;
+  color:black;
+}
+
 .github img{
   max-width:90%;
-  border-radius:10px;
-  margin-top:20px;
+  border-radius:12px;
+  border:1px solid rgba(0,255,204,0.2);
+}
+
+body{
+  margin:0;
+  font-family:monospace;
+  background:radial-gradient(circle at top, #001f1f, #000);
+  color:white;
 }
 
 body{
@@ -32,12 +61,11 @@ body{
 
 /* NAV */
 nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px;
-}
-nav h2{
-  color:#00ffcc;
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:10;
 }
 
 nav a{
@@ -116,24 +144,25 @@ nav a:hover{
 
 /* SECTION */
 section{
-  padding:60px 20px;
+  padding:80px 20px;
+
   text-align:center;
 }
 
 .project{
   background:rgba(15,23,42,0.6);
-  backdrop-filter:blur(10px);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(0,255,204,0.1);
   padding:20px;
   margin:20px auto;
-  border-radius:12px;
+  border-radius:14px;
   max-width:400px;
-  border:1px solid rgba(0,255,204,0.1);
   transition:0.3s;
 }
 
 .project:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 0 30px rgba(0,255,204,0.2);
+  transform:translateY(-6px);
+  box-shadow:0 0 25px rgba(0,255,204,0.2);
 }
 
 /* SKILLS */
@@ -221,7 +250,7 @@ footer{
 <h2>Skills</h2>
 
 <p>HTML</p>
-<div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+<div class="progress-bar" data-width="90%"></div>
 
 <p>CSS</p>
 <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
@@ -254,6 +283,15 @@ footer{
 </footer>
 
 <script>
+
+const bars = document.querySelectorAll(".progress-bar");
+
+window.addEventListener("scroll", ()=>{
+  bars.forEach(bar=>{
+    bar.style.width = bar.dataset.width;
+  });
+});
+
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
@@ -335,8 +373,7 @@ fetch("https://api.github.com/users/USERNAME/repos")
 
 });
 
-const text = "Front End Developer | Web3 Builder | Open Source Learner";
-let i = 0;
+const text = "Building fast, modern & high-performance web experiences.";
 
 function typing(){
   if(i < text.length){
